@@ -17,6 +17,9 @@ int main(){
     // cout<<"whether element is empty"<<a.empty()<<endl;
     // vectors
     vector<int> v;
+    vector<int> a(5,1);
+    // by this way we can make a vector of size 5 with all elements initialised with 1
+    
     v.push_back(1);
     // its capacity always gets double whenever it is full
     cout<<v.size()    <<endl;
@@ -30,7 +33,11 @@ int main(){
     cout<<"after pop";
     for(int i:v){
         cout<<i<<" ";
-    }cout<<endl;
+    }cout<<endl; 
+    v.clear();
+    cout<<v.size();
+    // clear doesnot make capacity zero but make size 0 capacity is length assign to vector size is how many elements are filled in vector
+    // some functions are similar to the arrays like front back etc.
 
     return 0;
 }
