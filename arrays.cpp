@@ -2,20 +2,32 @@
 using namespace std;
 int main(){
  
-    
-int A[10]={2,4,6,8,12,3,5,7,9};
-int key;
- cout<<"Enter a Key element ";
- cin>>key;
-for(int i=0;i<10;i++)
- {
- if(key==A[i])
- {
- cout<<"The Key element is found at "<<i<<endl;
- exit(0);
- }
- }
- cout<<"Key element not found"<<endl;
+int n =5;
+int A[5]={2,4,6,8,12};
+int sum=0;
+int mean;
+int avg;
+for(int i=0;i<n;i++){
+    sum=sum+A[i];
+
+}
+avg=sum/2;
+mean=sum/n;
+cout<<sum<<endl;
+cout<<avg<<endl;
+cout<<mean;
+// int key;
+//  cout<<"Enter a Key element ";
+//  cin>>key;
+// for(int i=0;i<10;i++)
+//  {
+//  if(key==A[i])
+//  {
+//  cout<<"The Key element is found at "<<i<<endl;
+//  exit(0);
+//  }
+//  }
+//  cout<<"Key element not found"<<endl;
     // int A[6]={5,7,8,9,16,20};
     // int key=16;int n;
     // for (int i = 0; i < n; i++){
