@@ -1,21 +1,31 @@
 #include<iostream>
 using namespace std;
-struct listnode
-{
-    int val;
-    listnode* node;
+struct listnode{
+int val;
+listnode *next;
 };
+void deletion(listnode* node){
+    if(node -> next==0){
+        delete node;
+    }
+    else{
+        swap(node->val,node->next->val);
+        listnode* temp=node->next;
+        node->next=temp->next;
+        delete temp;
+    }
+}
 void displayll(listnode* node){
     listnode* temp=node;
     while(temp!=NULL){
         cout<<temp->val<<" ";
-        temp= temp->node;
+        temp=temp->next;
     }
-
 }
 
 int main(){
     listnode* head=NULL;
+    
     listnode* second=NULL;
     listnode* third=NULL;
     listnode* fourth=NULL;
@@ -26,15 +36,14 @@ int main(){
     fourth=new listnode();
 
     head->val =1;
-    head->node =second;
+    head->next =second;
     second->val =79;
-    second->node =third;
+    second->next =third;
     third->val =700;
-    third->node =fourth;
+    third->next =fourth;
     fourth->val=34;
-    fourth->node=NULL;
+    fourth->next=NULL;
+    deletion(second);
     displayll(head);
-    cout<<fourth<<endl;
-    cout<<head->node;
     return 0;
 }
